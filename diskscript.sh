@@ -2,7 +2,7 @@
 
 #Validating by passing 2 arguments and printing out disk-usage for the selected directory
 
-if [ "$#" -eq 2 ] && [ "$1" == "d" ] && [ -d $2 ]
+if [ "$#" -eq 2 ] && [ "$1" == "-d" ] && [ -d $2 ]
 then
 	echo "Disk usage in a selected dir"
 	sudo du -h --max-depth=1 "$2" | sort -rh | head
